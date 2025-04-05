@@ -14,6 +14,7 @@
   --text-secondary-color: #ffffff;
   --background-light: #ffffff;
   --background-dark: #0e1625;
+  --line-color: var(--background-light);
 }
 
 h1 {
@@ -37,6 +38,7 @@ h3 {
 body {
   background-color: var(--background-light);
   color: var(--text-primary-color);
+  --line-color: var(--background-dark);
   transition:
     background-color 1s ease,
     color 1s ease;
@@ -45,6 +47,7 @@ body {
 body.dark-theme {
   background-color: var(--background-dark);
   color: var(--text-secondary-color);
+  --line-color: var(--background-light);
 }
 
 a {

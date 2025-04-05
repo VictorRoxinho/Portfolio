@@ -1,7 +1,8 @@
 import "./App.css";
 
-import Hero from "./pages/Hero/hero.tsx";
-import Body from "./pages/Body/body.tsx";
+import Hero from "./sections/Hero/hero.tsx";
+import Body from "./sections/Body/body.tsx";
+import About from "./sections/About Me/aboutMe.tsx";
 import { ThemeProvider } from "./themes/ThemeContext.tsx";
 
 function App() {
@@ -10,6 +11,7 @@ function App() {
       <ThemeProvider>
         <Hero />
         <Body />
+        <About />
       </ThemeProvider>
     </>
   );
