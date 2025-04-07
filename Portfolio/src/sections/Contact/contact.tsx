@@ -19,10 +19,10 @@ function Contact() {
           </h2>
         </div>
         <div className='social-links-footer'>
-          <a href='#'>
+          <a href='https://github.com/VictorRoxinho' target='_blank'>
             <GitHubIcon style={{ fontSize: "4rem" }} />
           </a>
-          <a href='#'>
+          <a href='https://www.linkedin.com/in/jo%C3%A3o-victor-roxinho-0b2431250/' target='_blank'>
             <LinkedInIcon style={{ fontSize: "4rem" }} />{" "}
           </a>
         </div>

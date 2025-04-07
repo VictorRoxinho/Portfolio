@@ -43,6 +43,39 @@ nav {
   margin: 1.5rem 0 1.5rem 2.5rem;
 }
 
+.saudacao {
+  display: block;
+  border-right: 6px solid var(--line-color);
+  white-space: nowrap;
+  overflow: hidden;
+  width: 0;
+
+  animation:
+    mark 1s step-end infinite,
+    write 10s steps(15, end) infinite;
+}
+
+@keyframes mark {
+  50% {
+    border-right-color: transparent;
+  }
+}
+
+@keyframes write {
+  20% {
+    width: 13.5ch;
+  }
+  70% {
+    width: 13.5ch;
+  }
+  85% {
+    width: 0;
+  }
+  100% {
+    width: 0;
+  }
+}
+
 @media (min-width: 1280px) {
   .description {
     width: 70%;
@@ -99,5 +132,9 @@ nav {
 
   .menu-links-close {
     display: none;
+  }
+
+  .title {
+    font-size: 2.7rem;
   }
 }

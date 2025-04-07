@@ -1,5 +1,5 @@
 import { useTheme } from "../../themes/ThemeContext";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "./hero.css";
 
 // Icons
@@ -17,8 +17,8 @@ function Hero() {
 
   const handleMenuToggle = () => {
     setIsMenuOpen(!isMenuOpen);
-    console.log(isMenuOpen);
   };
+
   return (
     <>
       <nav className='website-navbar'>
@@ -31,10 +31,10 @@ function Hero() {
           <a href='#'>Sobre mim</a>
         </div>
         <div className='sociallinks'>
-          <a href='#'>
+          <a href='https://github.com/VictorRoxinho/' target='_blank'>
             <GitHubIcon />
           </a>
-          <a href='#'>
+          <a href='https://www.linkedin.com/in/jo%C3%A3o-victor-roxinho-0b2431250/' target='_blank'>
             <LinkedInIcon />
           </a>
           <a href='#'>{isDarkMode ? <LightModeIcon onClick={toggleTheme} /> : <DarkModeIcon onClick={toggleTheme} />}</a>
@@ -43,11 +43,7 @@ function Hero() {
       {/* Mobile Navbar */}
       <nav className='mobile-navbar'>
         <div className='menu' onClick={() => handleMenuToggle()}>
-          {isMenuOpen ? (
-            <MenuOpenIcon style={{ fontSize: "3rem" }} /> // Ícone de fechar
-          ) : (
-            <MenuIcon style={{ fontSize: "3rem" }} /> // Ícone de hambúrguer
-          )}
+          {isMenuOpen ? <MenuOpenIcon style={{ fontSize: "3rem" }} /> : <MenuIcon style={{ fontSize: "3rem" }} />}
         </div>
         <div className={`${isMenuOpen ? "menu-links-open" : "menu-links-close"}`}>
           <LogoDevIcon style={{ fontSize: "3.5rem" }} />
@@ -67,7 +63,7 @@ function Hero() {
       </nav>
       <div className='about'>
         <h1 className='title'>
-          Olá, me chamo <span className='name'>João!</span> {/* Colocar efeito de escrever */}
+          Prazer, <span className='saudacao'>Me chamo João!</span>
         </h1>
         <p className='description'>
           Desenvolvedor Front-End, em progresso para o Full Stack. Estou sempre em busca de novos desafios e oportunidades para aprender e crescer na área de desenvolvimento. E vai ser um prazer te

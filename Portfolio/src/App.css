@@ -15,6 +15,7 @@
   --background-light: #ffffff;
   --background-dark: #0e1625;
   --line-color: var(--background-light);
+  --name-animation: var(--background-dark);
 }
 
 h1 {
@@ -43,6 +44,7 @@ body {
   background-color: var(--background-light);
   color: var(--text-primary-color);
   --line-color: var(--background-dark);
+  --name-animation: var(--background-dark);
   transition:
     background-color 1s ease,
     color 1s ease;
@@ -52,6 +54,7 @@ body.dark-theme {
   background-color: var(--background-dark);
   color: var(--text-secondary-color);
   --line-color: var(--background-light);
+  --name-animation: var(--background-light);
 }
 
 a {
