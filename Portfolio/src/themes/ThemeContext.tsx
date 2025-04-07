@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useState } from "react";
+import React, { createContext, useContext, useState, useEffect } from "react";
 
 type ThemeContextType = {
   isDarkMode: boolean;
@@ -8,14 +8,30 @@ type ThemeContextType = {
 const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
 
 export const ThemeProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-  const [isDarkMode, setIsDarkMode] = useState(false);
+  const [isDarkMode, setIsDarkMode] = useState(() => {
+    const savedTheme = localStorage.getItem("theme");
+    return savedTheme === "dark";
+  });
 
   const toggleTheme = () => {
     const body = document.body;
-    body.classList.toggle("dark-theme");
-    body.setAttribute("data-theme", body.classList.contains("dark-theme") ? "dark" : "light");
-    setIsDarkMode(!isDarkMode);
+    const newTheme = !isDarkMode ? "dark" : "light";
+
+    localStorage.setItem("theme", newTheme);
+
+    body.classList.toggle("dark-theme", newTheme === "dark");
+    body.classList.toggle("light-theme", newTheme === "light");
+
+    setIsDarkMode(newTheme === "dark");
   };
+
+  useEffect(() => {
+    const body = document.body;
+    const savedTheme = localStorage.getItem("theme") || "light";
+
+    body.classList.add(savedTheme === "dark" ? "dark-theme" : "light-theme");
+    setIsDarkMode(savedTheme === "dark");
+  }, []);
 
   return (
     <ThemeContext.Provider value={{ isDarkMode, toggleTheme }}>

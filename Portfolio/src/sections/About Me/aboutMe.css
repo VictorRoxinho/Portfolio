@@ -2,6 +2,10 @@
   padding: 5rem 0;
 }
 
+.timeline h3 {
+  text-align: start;
+}
+
 .timeline {
   display: grid;
   grid-template-columns: 3fr 3fr 3fr 3fr;
@@ -35,4 +39,39 @@
   height: 0.5rem;
   background-color: var(--line-color);
   border-radius: 20px 0px 0px 20px;
+}
+@media (max-width: 768px) {
+  .timeline {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .timeline-item {
+    display: flex;
+    margin: 0;
+  }
+
+  .timeline-item h2 {
+    align-self: center;
+    margin-right: 10px;
+  }
+
+  .timeline-item h3 {
+    width: 100%;
+  }
+
+  .line {
+    display: grid;
+    grid-template-rows: 5fr 1fr 5fr;
+    grid-template-columns: none;
+    margin: 0;
+  }
+
+  .start-line,
+  .end-line {
+    width: 0.5rem;
+    height: 100%;
+    margin: 0 auto;
+    border-radius: 0;
+  }
 }

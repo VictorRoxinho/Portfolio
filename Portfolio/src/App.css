@@ -33,6 +33,10 @@ h3 {
 
 .theme-container {
   padding: 0 5rem;
+
+  @media (max-width: 768px) {
+    padding: 0 2rem;
+  }
 }
 
 body {
@@ -69,4 +73,20 @@ a {
 .btn:hover {
   transition: all 0.3s ease-in-out;
   transform: scale(1.01);
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 3.2rem;
+  }
+
+  h2 {
+    font-size: 1.8rem;
+    font-weight: 600;
+  }
+
+  h3 {
+    font-size: 1.3rem;
+    font-weight: 500;
+  }
 }
