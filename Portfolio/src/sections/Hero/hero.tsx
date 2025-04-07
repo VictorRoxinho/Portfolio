@@ -1,5 +1,5 @@
 import { useTheme } from "../../themes/ThemeContext";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import "./hero.css";
 
 // Icons
