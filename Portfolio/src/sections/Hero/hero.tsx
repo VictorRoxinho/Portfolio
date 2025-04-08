@@ -26,9 +26,9 @@ function Hero() {
           <LogoDevIcon style={{ fontSize: "3.5rem" }} />
         </div>
         <div className='pageslinks'>
-          <a href='#'>Projetos</a>
-          <a href='#'>Tecnologias</a>
-          <a href='#'>Sobre mim</a>
+          <a href='#body'>Projetos</a>
+          <a href='#about'>Tecnologias</a>
+          <a href='#contact'>Sobre mim</a>
         </div>
         <div className='sociallinks'>
           <a href='https://github.com/VictorRoxinho/' target='_blank'>
@@ -47,9 +47,9 @@ function Hero() {
         </div>
         <div className={`${isMenuOpen ? "menu-links-open" : "menu-links-close"}`}>
           <LogoDevIcon style={{ fontSize: "3.5rem" }} />
-          <a href='#'>Projetos</a>
-          <a href='#'>Tecnologias</a>
-          <a href='#'>Sobre mim</a>
+          <a href='#body'>Projetos</a>
+          <a href='#about'>Tecnologias</a>
+          <a href='#contact'>Sobre mim</a>
         </div>
         <div className='sociallinks'>
           <a href='#'>
@@ -69,9 +69,11 @@ function Hero() {
           Desenvolvedor Front-End, em progresso para o Full Stack. Estou sempre em busca de novos desafios e oportunidades para aprender e crescer na área de desenvolvimento. E vai ser um prazer te
           mostrar um pouco do meu trabalho.
         </p>
-        <button className='btn' style={{ marginLeft: "3rem" }}>
-          Saber mais
-        </button>
+        <a href='/Curriculo.pdf' download>
+          <button className='btn' style={{ marginLeft: "3rem" }}>
+            Saber mais
+          </button>
+        </a>
       </div>
     </>
   );

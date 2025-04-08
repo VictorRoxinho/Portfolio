@@ -8,14 +8,23 @@ import { ThemeProvider } from "./themes/ThemeContext.tsx";
 
 function App() {
   return (
-    <>
-      <ThemeProvider>
-        <Hero />
-        <Body />
-        <About />
-        <Contact />
-      </ThemeProvider>
-    </>
+    <ThemeProvider>
+      <div>
+        {/* Cada seção recebe um ID único */}
+        <section id='hero'>
+          <Hero />
+        </section>
+        <section id='body'>
+          <Body />
+        </section>
+        <section id='about'>
+          <About />
+        </section>
+        <section id='contact'>
+          <Contact />
+        </section>
+      </div>
+    </ThemeProvider>
   );
 }
 
