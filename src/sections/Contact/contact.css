@@ -1,0 +1,38 @@
+.contact-container {
+  display: grid;
+  grid-template-columns: 4fr 4fr 4fr;
+  padding-bottom: 3rem;
+}
+
+.email h2 {
+  text-align: start;
+}
+
+.social-links-footer {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.social-links-footer a :hover {
+  color: #f0a500;
+  transition: all 0.3s ease-in-out;
+}
+
+@media (max-width: 768px) {
+  .contact-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .contact-container span {
+    font-size: 1.5rem;
+  }
+
+  .number,
+  .email,
+  .email h2 {
+    text-align: center;
+  }
+}

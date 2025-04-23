@@ -1,0 +1,99 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+:root {
+  --primary-color: #020202;
+  --secondary-color: #ffffff;
+  --text-primary-color: #020202;
+  --text-secondary-color: #ffffff;
+  --background-light: #ffffff;
+  --background-dark: #0e1625;
+  --line-color: var(--background-light);
+  --name-animation: var(--background-dark);
+}
+
+h1 {
+  font-size: 3.5rem;
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+h3 {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.theme-container {
+  padding: 0 5rem;
+
+  @media (max-width: 768px) {
+    padding: 0 2rem;
+  }
+}
+
+body {
+  background-color: var(--background-light);
+  color: var(--text-primary-color);
+  --line-color: var(--background-dark);
+  --name-animation: var(--background-dark);
+  transition:
+    background-color 1s ease,
+    color 1s ease;
+}
+
+body.dark-theme {
+  background-color: var(--background-dark);
+  color: var(--text-secondary-color);
+  --line-color: var(--background-light);
+  --name-animation: var(--background-light);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.btn {
+  background: linear-gradient(270deg, #13adc7 0%, #6978d1 66.67%, #945dd6 100%);
+  color: #ffffff;
+  border: none;
+  width: 220px;
+  height: 60px;
+  border-radius: 83px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  transition: all 0.3s ease-in-out;
+  transform: scale(1.01);
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 3.2rem;
+  }
+
+  h2 {
+    font-size: 1.8rem;
+    font-weight: 600;
+  }
+
+  h3 {
+    font-size: 1.3rem;
+    font-weight: 500;
+  }
+}
